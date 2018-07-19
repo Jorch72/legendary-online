@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  legendaryonline:
+    image: ${DOCKER_REGISTRY}legendaryonline
+    build:
+      context: .
+      dockerfile: LegendaryOnline\Dockerfile
