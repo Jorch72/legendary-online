@@ -1,15 +1,147 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UserSecretsId>aspnet-LegendaryOnline-82488637-FD50-4C62-AEDF-4D035C391A14</UserSecretsId>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>    
     <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="src\assets\img\core\asgard\d.jpg" />
+    <Content Include="src\assets\img\core\asgard\e.jpg" />
+    <Content Include="src\assets\img\core\asgard\fg.jpg" />
+    <Content Include="src\assets\img\core\asgard\yfgk.jpg" />
+    <Content Include="src\assets\img\core\brotherhood\blob.jpg" />
+    <Content Include="src\assets\img\core\brotherhood\juggernaut.jpg" />
+    <Content Include="src\assets\img\core\brotherhood\mystique.jpg" />
+    <Content Include="src\assets\img\core\brotherhood\sabertooth.jpg" />
+    <Content Include="src\assets\img\core\captain\aa.jpg" />
+    <Content Include="src\assets\img\core\captain\aduao.jpg" />
+    <Content Include="src\assets\img\core\captain\db.jpg" />
+    <Content Include="src\assets\img\core\captain\pt.jpg" />
+    <Content Include="src\assets\img\core\cyclops\d.jpg" />
+    <Content Include="src\assets\img\core\cyclops\ob.jpg" />
+    <Content Include="src\assets\img\core\cyclops\ue.jpg" />
+    <Content Include="src\assets\img\core\cyclops\xmu.jpg" />
+    <Content Include="src\assets\img\core\deadpool\hcigado.jpg" />
+    <Content Include="src\assets\img\core\deadpool\hhtfas.jpg" />
+    <Content Include="src\assets\img\core\deadpool\ob.jpg" />
+    <Content Include="src\assets\img\core\deadpool\raou.jpg" />
+    <Content Include="src\assets\img\core\doom\doom.jpg" />
+    <Content Include="src\assets\img\core\doom\dt.jpg" />
+    <Content Include="src\assets\img\core\doom\md.jpg" />
+    <Content Include="src\assets\img\core\doom\sott.jpg" />
+    <Content Include="src\assets\img\core\doom\tol.jpg" />
+    <Content Include="src\assets\img\core\emma\df.jpg" />
+    <Content Include="src\assets\img\core\emma\md.jpg" />
+    <Content Include="src\assets\img\core\emma\pl.jpg" />
+    <Content Include="src\assets\img\core\emma\st.jpg" />
+    <Content Include="src\assets\img\core\evil\bz.jpg" />
+    <Content Include="src\assets\img\core\evil\m.jpg" />
+    <Content Include="src\assets\img\core\evil\u.jpg" />
+    <Content Include="src\assets\img\core\evil\w.jpg" />
+    <Content Include="src\assets\img\core\foes\do.jpg" />
+    <Content Include="src\assets\img\core\foes\gg.jpg" />
+    <Content Include="src\assets\img\core\foes\tl.jpg" />
+    <Content Include="src\assets\img\core\foes\v.jpg" />
+    <Content Include="src\assets\img\core\fury\bp.jpg" />
+    <Content Include="src\assets\img\core\fury\htw.jpg" />
+    <Content Include="src\assets\img\core\fury\lc.jpg" />
+    <Content Include="src\assets\img\core\fury\pf.jpg" />
+    <Content Include="src\assets\img\core\gambit\cs.jpg" />
+    <Content Include="src\assets\img\core\gambit\hc.jpg" />
+    <Content Include="src\assets\img\core\gambit\hsj.jpg" />
+    <Content Include="src\assets\img\core\gambit\std.jpg" />
+    <Content Include="src\assets\img\core\hawkeye\cf.jpg" />
+    <Content Include="src\assets\img\core\hawkeye\its.jpg" />
+    <Content Include="src\assets\img\core\hawkeye\qd.jpg" />
+    <Content Include="src\assets\img\core\hawkeye\tp.jpg" />
+    <Content Include="src\assets\img\core\henchman\doombot.jpg" />
+    <Content Include="src\assets\img\core\henchman\mutates.jpg" />
+    <Content Include="src\assets\img\core\henchman\ninja.jpg" />
+    <Content Include="src\assets\img\core\henchman\sentinel.jpg" />
+    <Content Include="src\assets\img\core\hulk\cr.jpg" />
+    <Content Include="src\assets\img\core\hulk\ga.jpg" />
+    <Content Include="src\assets\img\core\hulk\hs.jpg" />
+    <Content Include="src\assets\img\core\hulk\uh.jpg" />
+    <Content Include="src\assets\img\core\hydra\eaoh.jpg" />
+    <Content Include="src\assets\img\core\hydra\hk.jpg" />
+    <Content Include="src\assets\img\core\hydra\sh.jpg" />
+    <Content Include="src\assets\img\core\hydra\v.jpg" />
+    <Content Include="src\assets\img\core\ironman\ar.jpg" />
+    <Content Include="src\assets\img\core\ironman\ei.jpg" />
+    <Content Include="src\assets\img\core\ironman\qb.jpg" />
+    <Content Include="src\assets\img\core\ironman\rr.jpg" />
+    <Content Include="src\assets\img\core\loki\cr.jpg" />
+    <Content Include="src\assets\img\core\loki\loki.jpg" />
+    <Content Include="src\assets\img\core\loki\mt.jpg" />
+    <Content Include="src\assets\img\core\loki\vi.jpg" />
+    <Content Include="src\assets\img\core\loki\wal.jpg" />
+    <Content Include="src\assets\img\core\magneto\bc.jpg" />
+    <Content Include="src\assets\img\core\magneto\cs.jpg" />
+    <Content Include="src\assets\img\core\magneto\eb.jpg" />
+    <Content Include="src\assets\img\core\magneto\magneto.jpg" />
+    <Content Include="src\assets\img\core\magneto\xn.jpg" />
+    <Content Include="src\assets\img\core\radiation\a.jpg" />
+    <Content Include="src\assets\img\core\radiation\m.jpg" />
+    <Content Include="src\assets\img\core\radiation\tl.jpg" />
+    <Content Include="src\assets\img\core\radiation\z.jpg" />
+    <Content Include="src\assets\img\core\rogue\bb.jpg" />
+    <Content Include="src\assets\img\core\rogue\cp.jpg" />
+    <Content Include="src\assets\img\core\rogue\ed.jpg" />
+    <Content Include="src\assets\img\core\rogue\sa.jpg" />
+    <Content Include="src\assets\img\core\scheme\mbr.jpg" />
+    <Content Include="src\assets\img\core\scheme\nzpb.jpg" />
+    <Content Include="src\assets\img\core\scheme\pttdd.jpg" />
+    <Content Include="src\assets\img\core\scheme\relwk.jpg" />
+    <Content Include="src\assets\img\core\scheme\shcw.jpg" />
+    <Content Include="src\assets\img\core\scheme\siotss.jpg" />
+    <Content Include="src\assets\img\core\scheme\tlv.jpg" />
+    <Content Include="src\assets\img\core\scheme\utpotcc.jpg" />
+    <Content Include="src\assets\img\core\shield\agent.jpg" />
+    <Content Include="src\assets\img\core\shield\officer.jpg" />
+    <Content Include="src\assets\img\core\shield\trooper.jpg" />
+    <Content Include="src\assets\img\core\skrull\ptps.jpg" />
+    <Content Include="src\assets\img\core\skrull\sqv.jpg" />
+    <Content Include="src\assets\img\core\skrull\ss.jpg" />
+    <Content Include="src\assets\img\core\skrull\sss.jpg" />
+    <Content Include="src\assets\img\core\skull\er.jpg" />
+    <Content Include="src\assets\img\core\skull\hc.jpg" />
+    <Content Include="src\assets\img\core\skull\ng.jpg" />
+    <Content Include="src\assets\img\core\skull\rd.jpg" />
+    <Content Include="src\assets\img\core\skull\skull.jpg" />
+    <Content Include="src\assets\img\core\spider\as.jpg" />
+    <Content Include="src\assets\img\core\spider\gr.jpg" />
+    <Content Include="src\assets\img\core\spider\tasm.jpg" />
+    <Content Include="src\assets\img\core\spider\ws.jpg" />
+    <Content Include="src\assets\img\core\std\bystander.jpg" />
+    <Content Include="src\assets\img\core\std\masterstrike.jpg" />
+    <Content Include="src\assets\img\core\std\schemetwist.jpg" />
+    <Content Include="src\assets\img\core\std\wound.jpg" />
+    <Content Include="src\assets\img\core\storm\gs.jpg" />
+    <Content Include="src\assets\img\core\storm\lb.jpg" />
+    <Content Include="src\assets\img\core\storm\sc.jpg" />
+    <Content Include="src\assets\img\core\storm\tw.jpg" />
+    <Content Include="src\assets\img\core\thor\cl.jpg" />
+    <Content Include="src\assets\img\core\thor\got.jpg" />
+    <Content Include="src\assets\img\core\thor\o.jpg" />
+    <Content Include="src\assets\img\core\thor\sop.jpg" />
+    <Content Include="src\assets\img\core\widow\co.jpg" />
+    <Content Include="src\assets\img\core\widow\dr.jpg" />
+    <Content Include="src\assets\img\core\widow\ma.jpg" />
+    <Content Include="src\assets\img\core\widow\ss.jpg" />
+    <Content Include="src\assets\img\core\wolverine\br.jpg" />
+    <Content Include="src\assets\img\core\wolverine\fs.jpg" />
+    <Content Include="src\assets\img\core\wolverine\hf.jpg" />
+    <Content Include="src\assets\img\core\wolverine\ks.jpg" />
+  </ItemGroup>
 
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
   </ItemGroup>

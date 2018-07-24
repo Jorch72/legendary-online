@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
@@ -8,6 +8,7 @@ using LegendaryOnline.Data;
 using LegendaryOnline.Models;
 using LegendaryOnline.Services;
 using LegendaryOnline.Data.Context;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
 
 namespace LegendaryOnline
 {
@@ -51,6 +52,16 @@ namespace LegendaryOnline
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "src";
+                if (env.IsDevelopment())
+                {
+                    //spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
+                    spa.UseAngularCliServer(npmScript: "start");
+                }
+            });
 
             app.UseStaticFiles();
 
