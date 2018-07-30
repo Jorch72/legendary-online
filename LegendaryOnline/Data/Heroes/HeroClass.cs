@@ -1,4 +1,6 @@
-﻿namespace LegendaryOnline.Data.Heroes
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace LegendaryOnline.Data.Heroes
 {
     public enum HeroClass
     {

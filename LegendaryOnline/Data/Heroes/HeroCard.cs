@@ -1,8 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace LegendaryOnline.Data.Heroes
 {
     public class HeroCard
@@ -16,7 +11,8 @@ namespace LegendaryOnline.Data.Heroes
         public HeroTeam Team { get; internal set; }
 
         public string ImagePath { get; internal set; }
-
+        
+        public int HeroID { get; internal set; }
         public Hero Hero { get; internal set; }
     }
 }

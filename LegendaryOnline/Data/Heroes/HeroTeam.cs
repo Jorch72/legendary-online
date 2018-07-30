@@ -1,4 +1,4 @@
-﻿namespace LegendaryOnline.Data.Heroes
+namespace LegendaryOnline.Data.Heroes
 {
     public enum HeroTeam
     {

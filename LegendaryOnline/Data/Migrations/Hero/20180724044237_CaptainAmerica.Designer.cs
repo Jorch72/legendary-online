@@ -3,14 +3,16 @@ using LegendaryOnline.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LegendaryOnline.Data.Migrations.Hero
 {
     [DbContext(typeof(HeroDbContext))]
-    partial class HeroDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180724044237_CaptainAmerica")]
+    partial class CaptainAmerica
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,6 +72,34 @@ namespace LegendaryOnline.Data.Migrations.Hero
                         new { ID = 3, BaseAttack = 4, BaseRecruit = 0, Class = 16, Cost = 6, HeroID = 1, ImagePath = "core/captain/db.jpg", Name = "Diving Block", Team = 2 },
                         new { ID = 4, BaseAttack = 3, BaseRecruit = 0, Class = 8, Cost = 7, HeroID = 1, ImagePath = "core/captain/aduao.jpg", Name = "A Day Unlike Any Other", Team = 2 }
                     );
+                });
+
+            modelBuilder.Entity("LegendaryOnline.Data.Heroes.HeroCardClass", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Class")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HeroClass");
+                });
+
+            modelBuilder.Entity("LegendaryOnline.Data.Heroes.HeroCardTeam", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Team");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HeroTeam");
                 });
 
             modelBuilder.Entity("LegendaryOnline.Data.Heroes.HeroCard", b =>

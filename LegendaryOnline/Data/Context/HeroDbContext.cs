@@ -1,4 +1,4 @@
-﻿using LegendaryOnline.Data.Heroes;
+using LegendaryOnline.Data.Heroes;
 using LegendaryOnline.Data.SeedData;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +14,8 @@ namespace LegendaryOnline.Data.Context
             modelBuilder.HasDefaultSchema("hero");
             modelBuilder.Entity<Hero>().ToTable("Hero");
             modelBuilder.Entity<HeroCard>().ToTable("HeroCard");
+
+            modelBuilder.Entity<HeroCard>().HasOne(p => p.Hero).WithMany(b => b.HeroCards);
 
             modelBuilder.Seed();
         }
